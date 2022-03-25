@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Building from '../assets/images/building.png'
 import { useWeb3React } from "@web3-react/core";
 import { connectWallet } from "../utils/connectWallet";
-import {contractAddress, abi} from '../utils/contractDetails'
 // const { ethers } = require("ethers");
 
 const Nav = (props) => {
@@ -11,14 +10,6 @@ const Nav = (props) => {
         activate,
         deactivate
     } = useWeb3React();
-//   useEffect(() => {
-//     async function getContract(){
-//         const provider = new ethers.providers.Web3Provider(window.ethereum);
-//         const contract = new ethers.Contract(contractAddress, abi, provider);
-//         console.log(contract);
-//     }
-//     getContract();
-//   },[] )
   return (
     <div>
             <nav className="navbar navbar-light bg-light">
@@ -26,6 +17,7 @@ const Nav = (props) => {
                     <img src={Building}  width='30' height='30' className='d-inline-block align-top' />
                     Miami Real Estate
                 </a>
+               
                 <div className='ml-lg-auto'>
                     {
                         active?

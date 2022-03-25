@@ -1,6 +1,4 @@
 import { useWeb3React } from "@web3-react/core";
-import { ethers } from "ethers";
-import { useEffect, useState } from "react";
 import house from '../assets/images/house.jpg'
 import Panel from "./Panel";
 import "./home.css";
@@ -9,7 +7,6 @@ function Home() {
   const {
     active,
   } = useWeb3React();
-  const [balance, setBalance] = useState();
 
 
   return (
@@ -21,10 +18,10 @@ function Home() {
         <div className="container">
           <div className="row">
             <div className="col-lg-3" >
-              <h1 style={{marginTop: "200px", transform: "rotate(-90deg)"}}>
+              <h1 style={{marginTop: "100px", transform: "rotate(-90deg)"}}>
                 Future Way Of Real Estate
               </h1>
-              <h4 style={{marginTop: "5rem"}}>
+              <h4 style={{marginTop: "12rem"}}>
                 Blockchain base real estate platform
               </h4>
               <h5>
